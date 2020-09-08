@@ -4,7 +4,9 @@ function ToDoItem(props) {
   const [line, setLine] = React.useState(false);
 
   function handleClick() {
-    setLine(!line);
+    setLine((prevValue) => {
+      return !prevValue;
+    });
   }
 
   return (
